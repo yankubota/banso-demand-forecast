@@ -1,0 +1,67 @@
+/* banso-design-system 準拠のデザイントークン。
+   ⚠️ Bansoブランドカラー未確定のため、プリミティブ層は仮値（spec §7・§8 未決事項）。
+   確定後はプリミティブ層のみ差し替える（セマンティック層・UIは変更不要）。 */
+
+:root {
+  /* ---------- プリミティブ層（OKLCH・仮値。UIから直接参照しない） ---------- */
+  --blue-600: oklch(0.55 0.16 255);
+  --blue-700: oklch(0.48 0.16 255);
+  --blue-100: oklch(0.94 0.03 255);
+  --teal-600: oklch(0.6 0.11 185);
+  --gray-50: oklch(0.985 0.003 250);
+  --gray-100: oklch(0.96 0.004 250);
+  --gray-200: oklch(0.91 0.006 250);
+  --gray-400: oklch(0.7 0.01 250);
+  --gray-600: oklch(0.5 0.015 250);
+  --gray-900: oklch(0.24 0.02 255);
+  --green-600: oklch(0.58 0.13 150);
+  --amber-600: oklch(0.7 0.14 75);
+  --amber-100: oklch(0.95 0.05 85);
+  --red-600: oklch(0.55 0.19 25);
+  --red-100: oklch(0.95 0.03 25);
+
+  /* ---------- セマンティック層（UIはここを参照する） ---------- */
+  --color-bg: var(--gray-50);
+  --color-bg-subtle: var(--gray-100);
+  --color-surface: oklch(1 0 0);
+  --color-text-primary: var(--gray-900);
+  --color-text-secondary: var(--gray-600);
+  --color-text-muted: var(--gray-400);
+  --color-accent: var(--blue-600);
+  --color-accent-hover: var(--blue-700);
+  --color-accent-subtle: var(--blue-100);
+  --color-border: var(--gray-200);
+  --color-success: var(--green-600);
+  --color-warning: var(--amber-600);
+  --color-warning-subtle: var(--amber-100);
+  --color-danger: var(--red-600);
+  --color-danger-subtle: var(--red-100);
+
+  /* ---------- タイポグラフィ（Major Third 1.25） ---------- */
+  --font-sans: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, system-ui, sans-serif;
+  --font-num: "SF Mono", "Roboto Mono", ui-monospace, monospace; /* KPI数値の強調用 */
+  --text-xs: 12px;
+  --text-sm: 13px;
+  --text-base: 15px;
+  --text-lg: 19px;
+  --text-xl: 24px;
+  --text-2xl: 30px;
+
+  /* ---------- スペーシング（8pxグリッド） ---------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --content-max: 1200px;
+
+  /* ---------- 角丸・影 ---------- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
+  --shadow-sm: 0 1px 2px oklch(0.2 0.02 255 / 0.06);
+  --shadow-md: 0 4px 12px oklch(0.2 0.02 255 / 0.08);
+}
