@@ -1,0 +1,32 @@
+name: "🤖 実装（AI）"
+description: "承認済みspecに基づきClaude Codeが実装するIssue"
+title: "[プロジェクト名] "
+labels: ["ai-impl"]
+body:
+  - type: input
+    attributes:
+      label: 親Issue / spec参照
+      placeholder: "#12 / spec.md v3 §4.2"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: やること
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 完了条件（AIが自己判定できる検証可能な表現で）
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Banso DDD チェック
+      options:
+        - label: spec承認済み（推測実装ではない）
+          required: true
+        - label: 非破壊原則を遵守する（物理削除は2段階方式）
+          required: true
