@@ -1,0 +1,25 @@
+name: "🧠 意思決定（Human）"
+description: "方式決定・要件確定・承認など、人間が決めるIssue"
+title: "[プロジェクト名] "
+labels: ["human-decision"]
+body:
+  - type: textarea
+    attributes:
+      label: 背景
+      description: 経緯・現状・なぜ今決める必要があるか
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 選択肢（2〜3案）
+      value: |
+        - [ ] 案A：（メリット／デメリット／コスト）
+        - [ ] 案B：
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 完了条件
+      value: 方式が1つに決まり、spec.md に反映されている
+    validations:
+      required: true
